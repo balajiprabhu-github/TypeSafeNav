@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "TypeSafeNav"
 include(":app")
- 
+include(":common")
+include(":features:auth")
+include(":features:dashboard")
