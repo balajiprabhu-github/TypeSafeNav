@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlinx.serialization)
+    id("kotlin-parcelize")
+    alias(libs.plugins.dagger.hilt.android)
+    kotlin("kapt")
 }
 
 android {
@@ -66,4 +70,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // dagger
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.kapt)
+
+    // navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 }
